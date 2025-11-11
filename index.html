@@ -866,17 +866,22 @@
       try {
         const addresses = selectedHotels.map(h => h.address);
 
-        const origin = encodeURIComponent(addresses[0]);
+        /*1. ORIGEN FIJO: La ubicación actual del usuario*/
+        const origin = encodeURIComponent("Mi Ubicación Actual");
+
+        /* 2. DESTINO: El último hotel de la lista, que servirá como el punto final de la optimización.*/
         const destination = encodeURIComponent(addresses[addresses.length - 1]);
 
-        /* Los waypoints son los puntos intermedios*/
-        const waypoints = addresses.slice(1, -1).map(encodeURIComponent).join('|');
+        /* 3. WAYPOINTS: Todos los demás hoteles. Google Maps reordenará estos waypoints
+        // junto con el destino para encontrar la ruta más corta.*/
+        const waypoints = addresses.slice(0, -1).map(encodeURIComponent).join('|');
 
-        /*URL de Google Maps para direcciones. Utilizamos /dir/ con &optimize=true*/
+        /*Construcción de la URL de Google Maps
+        // Se utiliza 'origin' como punto de partida y '&optimize=true' para la reordenación de waypoints.*/
         let mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&waypoints=${waypoints}&travelmode=driving&optimize=true`;
 
         window.open(mapsUrl, '_blank', 'noopener noreferrer');
-        showToast('Ruta optimizada calculada con Google Maps 🚗', 'success');
+        showToast('Ruta optimizada calculada y comenzando desde tu ubicación actual 📍🚗', 'success');
 
       } catch (err) {
         console.error("Error al generar la URL de Google Maps:", err);
