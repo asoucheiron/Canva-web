@@ -1,0 +1,184 @@
+[
+    {
+        "route": 1,
+        "name": "EUROSTARS GRAND MARINA",
+        "address": "Moll de Bcn s/n, World Trade Center",
+        "comment": "",
+        "mapsLink": "https://maps.app.goo.gl/T896CvSyx5q1TAFp9"
+    },
+    {
+        "route": 2,
+        "name": "HILTON DIAGONAL MAR",
+        "address": "Pg del Taulat 262, CCIB",
+        "comment": "",
+        "mapsLink": "https://maps.app.goo.gl/MXUKGKTfrgAeiWNKA"
+    },
+    {
+        "route": 2,
+        "name": "LEONARDO BCN FORUM",
+        "address": "Pg del Taulat 278, CCIB",
+        "comment": "",
+        "mapsLink": "https://maps.app.goo.gl/maa2C2w6nAR5wk1D7"
+    },
+    {
+        "route": 2,
+        "name": "BARCELONA PRINCESS",
+        "address": "Av. Diagonal 1, Esq. Pg. Del Taulat",
+        "comment": "",
+        "mapsLink": "https://maps.app.goo.gl/oKNkMriiubTXiJY57"
+    },
+    {
+        "route": 2,
+        "name": "SB DIAGONAL ZERO",
+        "address": "Pl. de Llevant s/n, Frente Torre Telefónica",
+        "comment": "",
+        "mapsLink": "https://maps.app.goo.gl/khW9aGa9wM1xdYhK8"
+    },
+    {
+        "route": 2,
+        "name": "TEMBO BARCELONA",
+        "address": "Ramón Llull 479-487",
+        "comment": "Por detrás del SB D. Zero, lado Besós",
+        "mapsLink": "https://maps.app.goo.gl/utMpaygC9Cm5SN2a7"
+    },
+    {
+        "route": 2,
+        "name": "SLS BARCELONA",
+        "address": "Carrer de la Pau 2",
+        "comment": "Port Forum, Sant Adrià",
+        "mapsLink": "https://maps.app.goo.gl/mJkDuXd529TgaYaj8"
+    },
+    {
+        "route": 3,
+        "name": "SOFITEL SKIPPER",
+        "address": "Av. Del Litoral 10",
+        "comment": "Antes de llegar al Arts",
+        "mapsLink": "https://maps.app.goo.gl/bmdFCWYdTyDBG6jg9"
+    },
+    {
+        "route": 3,
+        "name": "SB ICARIA",
+        "address": "Av. D'Icària 195",
+        "comment": "Esq. Avila, lado montaña/Besós",
+        "mapsLink": "https://maps.app.goo.gl/Hdrozu2ejPWq9Psk6"
+    },
+    {
+        "route": 3,
+        "name": "H10 MARINA",
+        "address": "Av. Del Bogatell 64",
+        "comment": "Villa Olímpica",
+        "mapsLink": "https://maps.app.goo.gl/35q2UnUcwb382C4W9"
+    },
+    {
+        "route": 4,
+        "name": "SB GLOW",
+        "address": "Badajoz 148",
+        "comment": "Subiendo a Pl. Glories a mano dcha",
+        "mapsLink": "https://maps.app.goo.gl/iRSzX8fxk8fHKQYG7"
+    },
+    {
+        "route": 4,
+        "name": "THE HOXTON POBLENOU",
+        "address": "Av. Diagonal 205",
+        "comment": "A dcha, junto torre Glòries/Agbar",
+        "mapsLink": "https://maps.app.goo.gl/rYhL1jCoULqCNuML7"
+    },
+    {
+        "route": 4,
+        "name": "NOVOTEL BARCELONA CITY",
+        "address": "Ciutat de Granada 201",
+        "comment": "Esq. Diagonal",
+        "mapsLink": "https://maps.app.goo.gl/m7zhnzgpxZKxovNJ7"
+    },
+    {
+        "route": 4,
+        "name": "MELIÁ BARCELONA SKY",
+        "address": "Lope de Vega 141",
+        "comment": "Esq. Diagonal y Pere IV",
+        "mapsLink": "https://maps.app.goo.gl/J33uypRavXyqsx5i9"
+    },
+    {
+        "route": 4,
+        "name": "LABTWENTYTWO BCN",
+        "address": "Carrer del Perú 102",
+        "comment": "Paralela a C31, entre Espronceda y Bilbao",
+        "mapsLink": "https://maps.app.goo.gl/nHk1pWsXWoBr5o6Q9"
+    },
+    {
+        "route": 5,
+        "name": "OCCIDENTAL ATENEA MAR",
+        "address": "Pg. De García Fària 37",
+        "comment": "",
+        "mapsLink": "https://maps.app.goo.gl/1V3LmCA3siYFp55g7"
+    },
+    {
+        "route": 5,
+        "name": "ILUNION BARCELONA",
+        "address": "Ramón Turró 196",
+        "comment": "Esq. Llacuna, lado mar",
+        "mapsLink": "https://maps.app.goo.gl/8i1tu1cKviBxLq8GA"
+    },
+    {
+        "route": 5,
+        "name": "PAXTON BCN",
+        "address": "Lull 160",
+        "comment": "Entre Llacuna y Roc Boronat, lado mar",
+        "mapsLink": "https://maps.app.goo.gl/pDKwwLcXWVYHvPHB8"
+    },
+    {
+        "route": 6,
+        "name": "ILUNION BEL-ART",
+        "address": "Lepant 406",
+        "comment": "En frente Cuartel de Lepant",
+        "mapsLink": "https://maps.app.goo.gl/d92wVs4PM1C7jQNC8"
+    },
+    {
+        "route": 6,
+        "name": "RADISSON BLU 1882",
+        "address": "Còrsega 482",
+        "comment": "Esq. Sicilia, lado mar/Llobregat",
+        "mapsLink": "https://maps.app.goo.gl/C94jzwdX7YA6U75QA"
+    },
+    {
+        "route": 6,
+        "name": "NH PODIUM",
+        "address": "Bailén 4-6",
+        "comment": "Esq. Ali Bei, lado montaña/Besós",
+        "mapsLink": "https://maps.app.goo.gl/8iN6xnoqyzLhoGNQ9"
+    },
+    {
+        "route": 6,
+        "name": "CASA BONAY",
+        "address": "Gran Via CC 700",
+        "comment": "Antes de llegar a Pza Tetuán, a la dcha (esq. Bailén)",
+        "mapsLink": "https://maps.app.goo.gl/yNNnRHbXqgX7EKkRA"
+    },
+    {
+        "route": 7,
+        "name": "SEVENTY BARCELONA",
+        "address": "Còrsega 344",
+        "comment": "Entre R. de Llúria y Pau Claris, lado mar",
+        "mapsLink": "https://maps.app.goo.gl/L5xVMd9a9Mdn7tL97"
+    },
+    {
+        "route": 7,
+        "name": "THE ONE BARCELONA GL",
+        "address": "Provença 277",
+        "comment": "Esq. Pau Claris, lado montaña",
+        "mapsLink": "https://maps.app.goo.gl/SsND3z8KBPnq2das9"
+    },
+    {
+        "route": 7,
+        "name": "SIR VICTOR HOTEL",
+        "address": "Rosselló 265",
+        "comment": "Entre Pau Claris y Pg de Gràcia, lado montaña",
+        "mapsLink": "https://maps.app.goo.gl/aYAbVubqXbtXyoKU9"
+    },
+    {
+        "route": 7,
+        "name": "GALLERY",
+        "address": "Rosselló 249",
+        "comment": "Entre Rbla. Cat y Pg de Gràcia, lado montaña",
+        "mapsLink": "https://maps.app.goo.gl/8b3YhEGRQXAtFzga8"
+    }
+]
