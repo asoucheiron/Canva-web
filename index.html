@@ -7,6 +7,7 @@
   <title>Gestor de Rutas de Hoteles</title>
   <script src="/_sdk/element_sdk.js"></script>
   <style>
+    /* Tus estilos CSS existentes se mantienen igual */
     body {
       box-sizing: border-box;
       margin: 0;
@@ -327,6 +328,27 @@
       border-color: #667eea;
     }
 
+    .loading {
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    .loading-spinner {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      border-top-color: transparent;
+      animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
     @media (min-width: 1024px) {
       .main-content {
         flex-direction: row;
@@ -424,9 +446,16 @@
             <p>Selecciona hoteles de la lista para comenzar a planificar tu ruta.</p>
           </div>
         </div>
-        <div class="route-actions"><button class="btn btn-success" id="calculate-route-btn" disabled> <span>🧭 Calcular
-              Ruta Óptima</span> </button> <button class="btn btn-primary" id="clear-selection-btn" disabled> <span>🔄
-              Limpiar Selección</span> </button>
+        <div class="route-actions">
+          <button class="btn btn-success" id="calculate-route-btn" disabled>
+            <span id="calculate-text">🧭 Calcular Ruta Óptima</span>
+            <span id="calculate-loading" style="display: none;">
+              <div class="loading-spinner"></div> Calculando...
+            </span>
+          </button>
+          <button class="btn btn-primary" id="clear-selection-btn" disabled>
+            <span>🔄 Limpiar Selección</span>
+          </button>
         </div>
       </div>
     </div>
@@ -459,213 +488,217 @@
         "name": "LEONARDO BCN FORUM",
         "address": "Pg del Taulat 278,CCIB",
         "comment": "",
-        "mapsLink": "https://maps.app.goo.gl/maa2C2w6nAR5wk1D7",
-        "lat": 41.40991059858922,
-        "lng": 2.2186130354624054
+        "mapsLink": "https://maps.app.goo.gl/maa2C2w6nAR5wk1D7"
       },
       {
         "route": 2,
         "name": "BARCELONA PRINCESS",
         "address": "Av. Diagonal 1,Esq. Pg. Del Taulat",
         "comment": "",
-        "mapsLink": "https://maps.app.goo.gl/oKNkMriiubTXiJY57",
-        "lat": 41.41095138348593,
-        "lng": 2.2186675456325755
+        "mapsLink": "https://maps.app.goo.gl/oKNkMriiubTXiJY57"
       },
       {
         "route": 2,
         "name": "SB DIAGONAL ZERO",
         "address": "Pl. de Llevant s/n,Frente Torre Telefónica",
         "comment": "",
-        "mapsLink": "https://maps.app.goo.gl/khW9aGa9wM1xdYhK8",
-        "lat": 41.41223235049058,
-        "lng": 2.2198451659660288
+        "mapsLink": "https://maps.app.goo.gl/khW9aGa9wM1xdYhK8"
       },
       {
         "route": 2,
         "name": "TEMBO BARCELONA",
         "address": "Ramón Llull 479-487",
         "comment": "Por detrás del SB D. Zero, lado Besós",
-        "mapsLink": "https://maps.app.goo.gl/utMpaygC9Cm5SN2a7",
-        "lat": 41.41515372591302,
-        "lng": 2.220786557915777
+        "mapsLink": "https://maps.app.goo.gl/utMpaygC9Cm5SN2a7"
       },
       {
         "route": 2,
         "name": "SLS BARCELONA",
         "address": "Carrer de la Pau 2",
         "comment": "Port Forum, Sant Adrià",
-        "mapsLink": "https://maps.app.goo.gl/mJkDuXd529TgaYaj8",
-        "lat": 41.416155325201906,
-        "lng": 2.226183994714848
+        "mapsLink": "https://maps.app.goo.gl/mJkDuXd529TgaYaj8"
       },
       {
         "route": 3,
         "name": "SOFITEL SKIPPER",
+<<<<<<< HEAD
         "address": "Av. Del Litoral 10,Antes de llegar al Arts",
         "comment": "",
         "mapsLink": "https://maps.app.goo.gl/bmdFCWYdTyDBG6jg9",
         "lat": 41.38602938980801,
         "lng": 2.1947379544001127
+=======
+        "address": "Av. Del Litoral 10",
+        "comment": "Antes de llegar al Arts",
+        "mapsLink": "https://maps.app.goo.gl/bmdFCWYdTyDBG6jg9"
+>>>>>>> 53266334cdf55c49009d0732a289d0b5551e1b3d
       },
       {
         "route": 3,
         "name": "SB ICARIA ",
         "address": "Av. D'Icària 195",
         "comment": "Esq. Avila, lado montaña/Besós",
-        "mapsLink": "https://maps.app.goo.gl/Hdrozu2ejPWq9Psk6",
-        "lat": 41.39370040276063,
-        "lng": 2.1994066526199814
+        "mapsLink": "https://maps.app.goo.gl/Hdrozu2ejPWq9Psk6"
       },
       {
         "route": 3,
+<<<<<<< HEAD
         "name": "H10 MARINA ",
         "address": "Av. Del Bogatell 64,Villa Olímpica",
         "comment": "",
         "mapsLink": "https://maps.app.goo.gl/35q2UnUcwb382C4W9",
         "lat": 41.392875114525324,
         "lng": 2.1924708979929406
+=======
+        "name": "H10 MARINA",
+        "address": "Av. Del Bogatell 64",
+        "comment": "Villa Olímpica",
+        "mapsLink": "https://maps.app.goo.gl/35q2UnUcwb382C4W9"
+>>>>>>> 53266334cdf55c49009d0732a289d0b5551e1b3d
       },
       {
         "route": 4,
         "name": "SB GLOW",
+<<<<<<< HEAD
         "address": "Badajoz 148,Subiendo a Pl. Glories a mano dcha",
         "comment": "",
         "mapsLink": "https://maps.app.goo.gl/iRSzX8fxk8fHKQYG7",
         "lat": 41.40216206174385,
         "lng": 2.191129290600608
+=======
+        "address": "Badajoz 148",
+        "comment": "Subiendo a Pl. Glories a mano dcha",
+        "mapsLink": "https://maps.app.goo.gl/iRSzX8fxk8fHKQYG7"
+>>>>>>> 53266334cdf55c49009d0732a289d0b5551e1b3d
       },
       {
         "route": 4,
         "name": "THE HOXTON POBLENOU",
         "address": "Av. Diagonal 205",
         "comment": "A dcha, junto torre Glòries/Agbar",
-        "mapsLink": "https://maps.app.goo.gl/rYhL1jCoULqCNuML7",
-        "lat": 41.40388134803245,
-        "lng": 2.190244503472989
+        "mapsLink": "https://maps.app.goo.gl/rYhL1jCoULqCNuML7"
       },
       {
         "route": 4,
         "name": "NOVOTEL BARCELONA CITY",
+<<<<<<< HEAD
         "address": "Ciutat de Granada 201,Esq. Diagonal",
         "comment": "",
         "mapsLink": "https://maps.app.goo.gl/m7zhnzgpxZKxovNJ7",
         "lat": 41.40385737988843,
         "lng": 2.1912238249513
+=======
+        "address": "Ciutat de Granada 201",
+        "comment": "Esq. Diagonal",
+        "mapsLink": "https://maps.app.goo.gl/m7zhnzgpxZKxovNJ7"
+>>>>>>> 53266334cdf55c49009d0732a289d0b5551e1b3d
       },
       {
         "route": 4,
         "name": "MELIÁ BARCELONA SKY",
+<<<<<<< HEAD
         "address": "Lope de Vega 141,Esq. Diagonal y Pere IV",
         "comment": "",
         "mapsLink": "https://maps.app.goo.gl/J33uypRavXyqsx5i9",
         "lat": 41.40619356763894,
         "lng": 2.2009771955040707
+=======
+        "address": "Lope de Vega 141",
+        "comment": "Esq. Diagonal y Pere IV",
+        "mapsLink": "https://maps.app.goo.gl/J33uypRavXyqsx5i9"
+>>>>>>> 53266334cdf55c49009d0732a289d0b5551e1b3d
       },
       {
         "route": 4,
         "name": "LABTWENTYTWO BCN",
         "address": "Carrer del Perú 102",
         "comment": "Paralela a C31, entre Espronceda y Bilbao",
-        "mapsLink": "https://maps.app.goo.gl/nHk1pWsXWoBr5o6Q9",
-        "lat": 41.40899687930711,
-        "lng": 2.197275785102185
+        "mapsLink": "https://maps.app.goo.gl/nHk1pWsXWoBr5o6Q9"
       },
       {
         "route": 5,
         "name": "OCCIDENTAL ATENEA MAR",
         "address": "Pg. De García Fària 37",
         "comment": "",
-        "mapsLink": "https://maps.app.goo.gl/1V3LmCA3siYFp55g7",
-        "lat": 41.4022763356525,
-        "lng": 2.211670320652219
+        "mapsLink": "https://maps.app.goo.gl/1V3LmCA3siYFp55g7"
       },
       {
         "route": 5,
         "name": "ILUNION BARCELONA",
         "address": "Ramón Turró 196",
         "comment": "Esq. Llacuna, lado mar",
-        "mapsLink": "https://maps.app.goo.gl/8i1tu1cKviBxLq8GA",
-        "lat": 41.39910440586884,
-        "lng": 2.2021108489739976
+        "mapsLink": "https://maps.app.goo.gl/8i1tu1cKviBxLq8GA"
       },
       {
         "route": 5,
         "name": "PAXTON BCN",
         "address": "Lull 160",
         "comment": "Entre Llacuna y Roc Boronat, lado mar",
-        "mapsLink": "https://maps.app.goo.gl/pDKwwLcXWVYHvPHB8",
-        "lat": 41.39941498832945,
-        "lng": 2.200230566422449
+        "mapsLink": "https://maps.app.goo.gl/pDKwwLcXWVYHvPHB8"
       },
       {
         "route": 6,
         "name": "ILUNION BEL-ART",
+<<<<<<< HEAD
         "address": "Lepant 406,En frente Cuartel de Lepant",
         "comment": "",
         "mapsLink": "https://maps.app.goo.gl/d92wVs4PM1C7jQNC8",
         "lat": 41.410172007376325,
         "lng": 2.1695312494416266
+=======
+        "address": "Lepant 406",
+        "comment": "En frente Cuartel de Lepant",
+        "mapsLink": "https://maps.app.goo.gl/d92wVs4PM1C7jQNC8"
+>>>>>>> 53266334cdf55c49009d0732a289d0b5551e1b3d
       },
       {
         "route": 6,
         "name": "RADISSON BLU 1882",
         "address": "Còrsega 482",
         "comment": "Esq. Sicilia, lado mar/Llobregat",
-        "mapsLink": "https://maps.app.goo.gl/C94jzwdX7YA6U75QA",
-        "lat": 41.40402460610561,
-        "lng": 2.1696246887795136
+        "mapsLink": "https://maps.app.goo.gl/C94jzwdX7YA6U75QA"
       },
       {
         "route": 6,
         "name": "NH PODIUM",
         "address": "Bailén 4-6",
         "comment": "Esq. Ali Bei, lado montaña/Besós",
-        "mapsLink": "https://maps.app.goo.gl/8iN6xnoqyzLhoGNQ9",
-        "lat": 41.391553872190414,
-        "lng": 2.177893703503898
+        "mapsLink": "https://maps.app.goo.gl/8iN6xnoqyzLhoGNQ9"
       },
       {
         "route": 6,
         "name": "CASA BONAY",
         "address": "Gran Via CC 700",
         "comment": "Antes de llegar a Pza Tetuán, a la dcha (esq. Bailén)",
-        "mapsLink": "https://maps.app.goo.gl/yNNnRHbXqgX7EKkRA",
-        "lat": 41.39362200391083,
-        "lng": 2.1743192380350056
+        "mapsLink": "https://maps.app.goo.gl/yNNnRHbXqgX7EKkRA"
       },
       {
         "route": 7,
         "name": "SEVENTY BARCELONA",
         "address": "Còrsega 344",
         "comment": "Entre R. de Llúria y Pau Claris, lado mar",
-        "mapsLink": "https://maps.app.goo.gl/L5xVMd9a9Mdn7tL97",
-        "lat": 41.39806698492816,
-        "lng": 2.1615557214779777
+        "mapsLink": "https://maps.app.goo.gl/L5xVMd9a9Mdn7tL97"
       },
       {
         "route": 7,
         "name": "THE ONE BARCELONA GL",
         "address": "Provença 277",
         "comment": "Esq. Pau Claris, lado montaña",
-        "mapsLink": "https://maps.app.goo.gl/SsND3z8KBPnq2das9",
-        "lat": 41.39612011021474,
-        "lng": 2.1630349537020006
+        "mapsLink": "https://maps.app.goo.gl/SsND3z8KBPnq2das9"
       },
       {
         "route": 7,
         "name": "SIR VICTOR HOTEL",
         "address": "Rosselló 265",
         "comment": "Entre Pau Claris y Pg de Gràcia, lado montaña",
-        "mapsLink": "https://maps.app.goo.gl/aYAbVubqXbtXyoKU9",
-        "lat": 41.39622172716171,
-        "lng": 2.160967695348123
+        "mapsLink": "https://maps.app.goo.gl/aYAbVubqXbtXyoKU9"
       },
       {
         "route": 7,
         "name": "GALLERY",
         "address": "Rosselló 249",
         "comment": "Entre Rbla. Cat y Pg de Gràcia, lado montaña",
+<<<<<<< HEAD
         "mapsLink": "https://maps.app.goo.gl/8b3YhEGRQXAtFzga8",
         "lat": 41.395137887530325,
         "lng": 2.1591852277211916
@@ -1128,6 +1161,9 @@
         "mapsLink": "https://maps.app.goo.gl/hi6VvYhFoNGiteTq7",
         "lat": 41.35928520050959,
         "long": 2.132392914319662
+=======
+        "mapsLink": "https://maps.app.goo.gl/8b3YhEGRQXAtFzga8"
+>>>>>>> 53266334cdf55c49009d0732a289d0b5551e1b3d
       }
     ];
 
@@ -1142,6 +1178,7 @@
       7: '#BB8FCE',   // Púrpura
       8: '#F8B739',   // Naranja
       9: '#85C1E2',   // Azul claro
+<<<<<<< HEAD
       10: '#F1948A',  // Rosa
       11: '#BAAF38',  //Amarillo oscuro
       12: '#736C20',  //Amarillo más oscuro
@@ -1151,10 +1188,15 @@
       16: '#A8348D',
       17: '#A38196'
       // Puedes agregar más colores para más rutas
+=======
+      10: '#F1948A'   // Rosa
+>>>>>>> 53266334cdf55c49009d0732a289d0b5551e1b3d
     };
+
     // ========================================
-    // FIN DE LA SECCIÓN DE HOTELES
+    // CONFIGURACIÓN TOMTOM
     // ========================================
+    const TOMTOM_API_KEY = 'YOUR_TOMTOM_API_KEY'; // Reemplaza con tu API Key de TomTom
 
     const defaultConfig = {
       app_title: "Gestor de Rutas de Hoteles",
@@ -1170,6 +1212,7 @@
 
     let hotels = [];
     let filteredHotels = [];
+    let userLocation = null;
 
     function getRouteColor(routeNumber) {
       return ROUTE_COLORS[routeNumber] || '#667eea';
@@ -1318,6 +1361,211 @@
       }, 3000);
     }
 
+    function setLoadingState(loading) {
+      const btn = document.getElementById('calculate-route-btn');
+      const text = document.getElementById('calculate-text');
+      const loadingEl = document.getElementById('calculate-loading');
+
+      if (loading) {
+        btn.classList.add('loading');
+        btn.disabled = true;
+        text.style.display = 'none';
+        loadingEl.style.display = 'inline-flex';
+      } else {
+        btn.classList.remove('loading');
+        btn.disabled = false;
+        text.style.display = 'inline-flex';
+        loadingEl.style.display = 'none';
+      }
+    }
+
+    // Función para obtener la ubicación del usuario
+    function getUserLocation() {
+      return new Promise((resolve, reject) => {
+        if (!navigator.geolocation) {
+          reject(new Error('Geolocalización no soportada'));
+          return;
+        }
+
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            userLocation = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+            resolve(userLocation);
+          },
+          (error) => {
+            reject(error);
+          },
+          {
+            enableHighAccuracy: true,
+            timeout: 10000,
+            maximumAge: 60000
+          }
+        );
+      });
+    }
+
+    // Función para geocodificar una dirección usando TomTom
+    async function geocodeAddress(address) {
+      try {
+        const response = await fetch(
+          `https://api.tomtom.com/search/2/geocode/${encodeURIComponent(address)}.json?key=${TOMTOM_API_KEY}&limit=1`
+        );
+
+        if (!response.ok) {
+          throw new Error('Error en geocodificación');
+        }
+
+        const data = await response.json();
+
+        if (data.results && data.results.length > 0) {
+          const result = data.results[0];
+          return {
+            lat: result.position.lat,
+            lng: result.position.lon
+          };
+        } else {
+          throw new Error('Dirección no encontrada');
+        }
+      } catch (error) {
+        console.error('Error en geocodificación:', error);
+        throw error;
+      }
+    }
+
+    // Función principal para calcular ruta optimizada con TomTom
+    async function calculateTomTomRoute(selectedHotels) {
+      try {
+        setLoadingState(true);
+
+        // 1. Obtener ubicación del usuario
+        showToast('Obteniendo tu ubicación actual...', 'success');
+        await getUserLocation();
+
+        // 2. Geocodificar direcciones de hoteles
+        showToast('Calculando mejores rutas...', 'success');
+        const waypoints = [];
+
+        for (const hotel of selectedHotels) {
+          const coords = await geocodeAddress(hotel.address);
+          waypoints.push({
+            ...coords,
+            name: hotel.name
+          });
+        }
+
+        // 3. Construir URL para TomTom Route Planner
+        // TomTom no tiene optimización automática como Google, pero podemos usar el orden actual
+        const origin = `${userLocation.lat},${userLocation.lng}`;
+        const destination = `${waypoints[waypoints.length - 1].lat},${waypoints[waypoints.length - 1].lng}`;
+
+        // Crear waypoints intermedios (todos menos el último)
+        const intermediateWaypoints = waypoints.slice(0, -1)
+          .map(wp => `${wp.lat},${wp.lng}`)
+          .join(':');
+
+        let tomtomUrl = `https://api.tomtom.com/routing/1/calculateRoute/`;
+
+        if (intermediateWaypoints) {
+          tomtomUrl += `${origin}:${intermediateWaypoints}:${destination}/json?`;
+        } else {
+          tomtomUrl += `${origin}:${destination}/json?`;
+        }
+
+        tomtomUrl += `key=${TOMTOM_API_KEY}`;
+        tomtomUrl += `&travelMode=car`;
+        tomtomUrl += `&routeType=fastest`;
+        tomtomUrl += `&traffic=true`;
+        tomtomUrl += `&instructionsType=text`;
+        tomtomUrl += `&language=es-ES`;
+        tomtomUrl += `&vehicleMaxSpeed=120`;
+        tomtomUrl += `&vehicleWeight=1600`;
+        tomtomUrl += `&vehicleCommercial=false`;
+        tomtomUrl += `&vehicleLoadType=0`;
+        tomtomUrl += `&vehicleEngineType=combustion`;
+
+        // 4. Obtener la ruta de TomTom
+        const response = await fetch(tomtomUrl);
+
+        if (!response.ok) {
+          throw new Error('Error al calcular la ruta');
+        }
+
+        const routeData = await response.json();
+
+        // 5. Crear URL para TomTom Maps con la ruta calculada
+        const mapUrl = createTomTomMapUrl(origin, waypoints, routeData);
+
+        // 6. Abrir en nueva pestaña
+        window.open(mapUrl, '_blank', 'noopener noreferrer');
+
+        showToast('¡Ruta calculada exitosamente! 🗺️', 'success');
+
+      } catch (error) {
+        console.error('Error calculando ruta TomTom:', error);
+
+        if (error.code === 1) {
+          showToast('Permiso de ubicación denegado. Usando ubicación por defecto.', 'error');
+          // Fallback a ubicación por defecto (centro de Barcelona)
+          userLocation = { lat: 41.3851, lng: 2.1734 };
+          // Reintentar sin ubicación del usuario
+          await calculateTomTomRouteFallback(selectedHotels);
+        } else {
+          showToast('Error al calcular la ruta. Intenta de nuevo.', 'error');
+        }
+      } finally {
+        setLoadingState(false);
+      }
+    }
+
+    // Fallback cuando no se puede obtener la ubicación
+    async function calculateTomTomRouteFallback(selectedHotels) {
+      try {
+        const addresses = selectedHotels.map(h => h.address);
+        const origin = encodeURIComponent("Barcelona, España");
+        const destination = encodeURIComponent(addresses[addresses.length - 1]);
+        const waypoints = addresses.slice(0, -1).map(encodeURIComponent).join('|');
+
+        const mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&waypoints=${waypoints}&travelmode=driving&optimize=true`;
+
+        window.open(mapsUrl, '_blank', 'noopener noreferrer');
+        showToast('Ruta calculada con ubicación por defecto 🗺️', 'success');
+      } catch (fallbackError) {
+        showToast('Error crítico al calcular ruta', 'error');
+      }
+    }
+
+    // Crear URL para TomTom Maps
+    function createTomTomMapUrl(origin, waypoints, routeData) {
+      let mapUrl = `https://api.tomtom.com/map/1/basic.html?key=${TOMTOM_API_KEY}`;
+
+      // Añadir origen
+      mapUrl += `&origin=${origin}`;
+
+      // Añadir destino
+      const destination = `${waypoints[waypoints.length - 1].lat},${waypoints[waypoints.length - 1].lng}`;
+      mapUrl += `&destination=${destination}`;
+
+      // Añadir waypoints intermedios
+      if (waypoints.length > 2) {
+        const intermediate = waypoints.slice(0, -1)
+          .map(wp => `${wp.lat},${wp.lng}`)
+          .join(',');
+        mapUrl += `&waypoints=${intermediate}`;
+      }
+
+      // Añadir configuración del mapa
+      mapUrl += `&center=${userLocation.lat},${userLocation.lng}`;
+      mapUrl += `&zoom=12`;
+      mapUrl += `&layer=basic`;
+      mapUrl += `&traffic=flow`;
+
+      return mapUrl;
+    }
+
+    // Event Listeners
     document.getElementById('search-input').addEventListener('input', (e) => {
       filterHotels(e.target.value);
     });
@@ -1329,25 +1577,7 @@
         return;
       }
 
-      try {
-        const addresses = selectedHotels.map(h => h.address);
-
-        const origin = encodeURIComponent(addresses[0]);
-        const destination = encodeURIComponent(addresses[addresses.length - 1]);
-
-        /* Los waypoints son los puntos intermedios*/
-        const waypoints = addresses.slice(1, -1).map(encodeURIComponent).join('|');
-
-        /*URL de Google Maps para direcciones. Utilizamos /dir/ con &optimize=true*/
-        let mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&waypoints=${waypoints}&travelmode=driving&optimize=true`;
-
-        window.open(mapsUrl, '_blank', 'noopener noreferrer');
-        showToast('Ruta optimizada calculada con Google Maps 🚗', 'success');
-
-      } catch (err) {
-        console.error("Error al generar la URL de Google Maps:", err);
-        showToast('Error al generar la ruta en Google Maps', 'error');
-      }
+      await calculateTomTomRoute(selectedHotels);
     });
 
     document.getElementById('clear-selection-btn').addEventListener('click', () => {
@@ -1358,12 +1588,13 @@
       showToast('Selección limpiada', 'success');
     });
 
-
+    // Inicialización de la aplicación
     async function initializeApp() {
       if (window.elementSdk) {
         await window.elementSdk.init({
           defaultConfig,
           onConfigChange: async (config) => {
+            // Tu código existente de configuración...
             const appTitle = document.getElementById('app-title');
             const instructionText = document.getElementById('instruction-text');
             const customFont = config.font_family || defaultConfig.font_family;
@@ -1482,7 +1713,6 @@
 
     initializeApp();
   </script>
-  <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'99cdfdb8e2aa3eb3',t:'MTc2Mjg2NjIyMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
 </body>
 
 </html>
