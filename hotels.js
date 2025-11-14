@@ -1,6 +1,6 @@
-[
+const HOTELS_DATA = [
     {
-        "rote": 1,
+        "route": 1,
         "name": "EUROSTARS GRAND MARINA",
         "address": "Moll de Bcn s/n,World Trade Center",
         "comment": "",
@@ -692,4 +692,24 @@
         "lat": 41.35928520050959,
         "long": 2.132392914319662
     }
-]
+];
+
+const ROUTE_COLORS = {
+    1: '#FF6B6B',   // Rojo
+    2: '#4ECDC4',   // Turquesa
+    3: '#45B7D1',   // Azul
+    4: '#FFA07A',   // Salmón
+    5: '#98D8C8',   // Verde menta
+    6: '#F7DC6F',   // Amarillo
+    7: '#BB8FCE',   // Púrpura
+    8: '#F8B739',   // Naranja
+    9: '#85C1E2',   // Azul claro
+    10: '#F1948A',  // Rosa
+    11: '#BAAF38',  // Amarillo oscuro
+    12: '#736C20',  // Amarillo más oscuro
+    13: '#A67024',  // Naranja oscuro
+    14: '#C4471B',
+    15: '#FCB99F',
+    16: '#A8348D',
+    17: '#A38196'
+};
