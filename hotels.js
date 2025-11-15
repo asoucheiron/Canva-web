@@ -240,7 +240,7 @@ const HOTELS_DATA = [
         "comment": "(Esq. Casp, lado mar)",
         "mapsLink": "https://maps.app.goo.gl/2NuwjWFfz7MxMiVz8",
         "lat": 41.390470161143995,
-        "long": 2.172609122471961
+        "lng": 2.172609122471961
     },
     {
         "route": 8,
@@ -249,7 +249,7 @@ const HOTELS_DATA = [
         "comment": "(Esq. Llúria, lado Besós)",
         "mapsLink": "https://maps.app.goo.gl/HPKR7RPxzk4ShWsUA",
         "lat": 41.39151118781879,
-        "long": 2.1715163289585715
+        "lng": 2.1715163289585715
     },
     {
         "route": 8,
@@ -672,7 +672,7 @@ const HOTELS_DATA = [
         "comment": "",
         "mapsLink": "https://maps.app.goo.gl/rERP9fnj4mB1yGiy5",
         "lat": 41.354935928480465,
-        "long": 2.125936421682284
+        "lng": 2.125936421682284
     },
     {
         "route": 17,

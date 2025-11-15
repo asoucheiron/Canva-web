@@ -195,13 +195,13 @@ document.getElementById('calculate-route-btn').addEventListener('click', async (
     }
 
     try {
-        const addresses = selectedHotels.map(h => h.address);
+        const locations = selectedHotels.map(h => `${h.lat},${h.lng}`);
 
         const origin = encodeURIComponent(AIRPORT_ADDRESS);
-        const destination = encodeURIComponent(addresses[addresses.length - 1]);
+        const destination = encodeURIComponent(locations[locations.length - 1]);
 
         /* Los waypoints son todos los hoteles seleccionados */
-        const waypoints = addresses.slice(0, -1).map(encodeURIComponent).join('|');
+        const waypoints = locations.slice(0, -1).map(encodeURIComponent).join('|');
 
         /* URL de Google Maps para direcciones. Utilizamos /dir/ con &optimize=true */
         let mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&waypoints=${waypoints}&travelmode=driving&optimize=true`;
