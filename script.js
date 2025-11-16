@@ -208,7 +208,7 @@ document.getElementById('calculate-route-btn').addEventListener('click', async (
         const origin = "My+location";
 
         // URL de Google Maps con el orden calculado (sin optimize=true, ya que lo calculamos nosotros)
-        let mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&waypoints=${waypoints}&travelmode=driving`;
+        let mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=${destination}&waypoints=${waypoints}&travelmode=driving`;
 
         window.open(mapsUrl, '_blank', 'noopener noreferrer');
         showToast(`Ruta calculada (${distance.toFixed(2)} km aproximados) con Google Maps 🚗`, 'success');
