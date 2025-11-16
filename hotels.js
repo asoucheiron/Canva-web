@@ -258,7 +258,7 @@ const HOTELS_DATA = [
         "comment": "(Entre Pau Claris y Pg de Gràcia, lado mar)",
         "mapsLink": "https://maps.app.goo.gl/HjLmgGxPwqbcwFUS8",
         "lat": 41.39107339433926,
-        "long": 2.1682157239627045
+        "lng": 2.1682157239627045
     },
     {
         "route": 8,
@@ -267,7 +267,7 @@ const HOTELS_DATA = [
         "comment": "(Entre Diputació y Consell de Cent, lado Besós)",
         "mapsLink": "https://maps.app.goo.gl/iFjSkPbnsY3KoMdJA",
         "lat": 41.391171255642185,
-        "long": 2.166576508985028
+        "lng": 2.166576508985028
     },
     {
         "route": 8,
@@ -276,7 +276,7 @@ const HOTELS_DATA = [
         "comment": "(Esq. Valencia, lado montaña)",
         "mapsLink": "https://maps.app.goo.gl/BgGFZ7gGwyFEmNQe6",
         "lat": 41.39344460304131,
-        "long": 2.1639884617097804
+        "lng": 2.1639884617097804
     },
     {
         "route": 8,
@@ -285,7 +285,7 @@ const HOTELS_DATA = [
         "comment": "(Esq. València, lado Besós)",
         "mapsLink": "https://maps.app.goo.gl/SnqXjhWtffhyxtgL6",
         "lat": 41.39437362408376,
-        "long": 2.165196424314399
+        "lng": 2.165196424314399
     },
     {
         "route": 8,
@@ -294,7 +294,7 @@ const HOTELS_DATA = [
         "comment": "(Esq. Consell de Cent, lado Besós/montaña)",
         "mapsLink": "https://maps.app.goo.gl/CWUFzcw2hwTpgiNN7",
         "lat": 41.39269518806629,
-        "long": 2.1673979559112095
+        "lng": 2.1673979559112095
     },
     {
         "route": 8,
@@ -303,7 +303,7 @@ const HOTELS_DATA = [
         "comment": "(Esq. R. de Llúria, lado Llobregat)",
         "mapsLink": "https://maps.app.goo.gl/SYHvJWkgpHJps8hx9",
         "lat": 41.39395141678543,
-        "long": 2.1675520356639537
+        "lng": 2.1675520356639537
     },
     {
         "route": 8,
@@ -312,7 +312,7 @@ const HOTELS_DATA = [
         "comment": "(Esq. Diputació, lado Besós)",
         "mapsLink": "https://maps.app.goo.gl/M6tZanBumA8f6Mk26",
         "lat": 41.38930879781708,
-        "long": 2.1660362821305044
+        "lng": 2.1660362821305044
     },
     {
         "route": 8,
@@ -321,7 +321,7 @@ const HOTELS_DATA = [
         "comment": "(Entre Rbla. Cat y Pg de Gràcia, lado montaña)",
         "mapsLink": "https://maps.app.goo.gl/VCWxz1EgmzbtBwYw5",
         "lat": 41.39317890213527,
-        "long": 2.1615668755590334
+        "lng": 2.1615668755590334
     },
     {
         "route": 9,
@@ -330,7 +330,7 @@ const HOTELS_DATA = [
         "comment": "(Entre Enric Granados y Aribau, lado montaña)",
         "mapsLink": "https://maps.app.goo.gl/ZXam9sFKLmjyKYYeA",
         "lat": 41.392045840423556,
-        "long": 2.1555556749380114
+        "lng": 2.1555556749380114
     },
     {
         "route": 9,
@@ -339,7 +339,7 @@ const HOTELS_DATA = [
         "comment": "(Bajando a la dcha, entre Rosselló y Provença)",
         "mapsLink": "https://maps.app.goo.gl/RHLJfWfh7swUH2Dn8",
         "lat": 41.391865379698935,
-        "long": 2.156878376792106
+        "lng": 2.156878376792106
     },
     {
         "route": 9,
@@ -348,7 +348,7 @@ const HOTELS_DATA = [
         "comment": "A dcha, entre Rosselló y Provença (frente Granados 83)",
         "mapsLink": "https://maps.app.goo.gl/NdVLYcVYQQrTQSGM7",
         "lat": 41.39200475836279,
-        "long": 2.1569659537928754
+        "lng": 2.1569659537928754
     },
     {
         "route": 9,
@@ -357,7 +357,7 @@ const HOTELS_DATA = [
         "comment": "(Entre Balmes y Enric Granados, lado mar)",
         "mapsLink": "https://maps.app.goo.gl/yC3Hzqzbqu1EQ1cN7",
         "lat": 41.39120599517814,
-        "long": 2.1591810139862746
+        "lng": 2.1591810139862746
     },
     {
         "route": 9,
@@ -366,7 +366,7 @@ const HOTELS_DATA = [
         "comment": "(Entre Rbla Cat y Balmes, lado montaña)",
         "mapsLink": "https://maps.app.goo.gl/1uNjZ8LTfUmMcZhZA",
         "lat": 41.39452676964009,
-        "long": 2.156554663598239
+        "lng": 2.156554663598239
     },
     {
         "route": 9,
@@ -375,7 +375,7 @@ const HOTELS_DATA = [
         "comment": "(Esq. Muntaner, a la dcha)",
         "mapsLink": "https://maps.app.goo.gl/U1zuxb6bmn9DEPxT8",
         "lat": 41.394186154442934,
-        "long": 2.1492046694224483
+        "lng": 2.1492046694224483
     },
     {
         "route": 10,
@@ -384,7 +384,7 @@ const HOTELS_DATA = [
         "comment": "(A dcha, antes de la estació del Nord)",
         "mapsLink": "https://maps.app.goo.gl/kva8KXSr2SJ33Dj57",
         "lat": 41.38387271037136,
-        "long": 2.1846252502976364
+        "lng": 2.1846252502976364
     },
     {
         "route": 10,
@@ -393,7 +393,7 @@ const HOTELS_DATA = [
         "comment": "(En la plaza, lado Llobregat)",
         "mapsLink": "https://maps.app.goo.gl/5hrSvKPWNhr6eg4d7",
         "lat": 41.37820711118224,
-        "long": 2.178657178784603
+        "lng": 2.178657178784603
     },
     {
         "route": 10,
@@ -402,7 +402,7 @@ const HOTELS_DATA = [
         "comment": "Lado mar",
         "mapsLink": "https://maps.app.goo.gl/8XBjBAbMwMTUVRE59",
         "lat": 41.383461840146666,
-        "long": 2.1781628386198664
+        "lng": 2.1781628386198664
     },
     {
         "route": 10,
@@ -411,7 +411,7 @@ const HOTELS_DATA = [
         "comment": "Subiendo, a mano dcha, antes de la catedral",
         "mapsLink": "https://maps.app.goo.gl/EvKPBrv9D6iVRKSs8",
         "lat": 41.38490575586353,
-        "long": 2.1776477777475653
+        "lng": 2.1776477777475653
     },
     {
         "route": 10,
@@ -420,7 +420,7 @@ const HOTELS_DATA = [
         "comment": "Subiendo, a mano dcha, pasada la catedral",
         "mapsLink": "https://maps.app.goo.gl/oRx8kN9LyCYzwc2w5",
         "lat": 41.38602121399078,
-        "long": 2.1761566256663616
+        "lng": 2.1761566256663616
     },
     {
         "route": 10,
@@ -429,7 +429,7 @@ const HOTELS_DATA = [
         "comment": "Esq. Pintor Fortuny, lado Llobregat",
         "mapsLink": "https://maps.app.goo.gl/HkqKjbemccaNSrGKA",
         "lat": 41.383527815496,
-        "long": 2.170624256795788
+        "lng": 2.170624256795788
     },
     {
         "route": 10,
@@ -438,7 +438,7 @@ const HOTELS_DATA = [
         "comment": "Esq. Pintor Fortuny, lado Llobregat",
         "mapsLink": "https://maps.app.goo.gl/kHgygHQn9erVhQcb9",
         "lat": 41.383540761759285,
-        "long": 2.1711972924371956
+        "lng": 2.1711972924371956
     },
     {
         "route": 10,
@@ -447,7 +447,7 @@ const HOTELS_DATA = [
         "comment": "Lado mar",
         "mapsLink": "https://maps.app.goo.gl/C9sjpDhRb1siUMeB6",
         "lat": 41.383007830904134,
-        "long": 2.1700083771004017
+        "lng": 2.1700083771004017
     },
     {
         "route": 11,
@@ -456,7 +456,7 @@ const HOTELS_DATA = [
         "comment": "(Esq. Casanova, lado montaña)",
         "mapsLink": "https://maps.app.goo.gl/fMS8ayKfGayUK8Dh7",
         "lat": 41.38409534409633,
-        "long": 2.1607222416355283
+        "lng": 2.1607222416355283
     },
     {
         "route": 11,
@@ -465,7 +465,7 @@ const HOTELS_DATA = [
         "comment": "(Esq. Muntaner, lado mar)",
         "mapsLink": "https://maps.app.goo.gl/nPNuy11STBGJT3V8A",
         "lat": 41.389100149762776,
-        "long": 2.156452302052392
+        "lng": 2.156452302052392
     },
     {
         "route": 11,
@@ -474,7 +474,7 @@ const HOTELS_DATA = [
         "comment": "Entre Còrsega y París, a mano dcha. Frente Escuela Ind",
         "mapsLink": "https://maps.app.goo.gl/nPNuy11STBGJT3V8A",
         "lat": 41.38959016998513,
-        "long": 2.1488818993801218
+        "lng": 2.1488818993801218
     },
     {
         "route": 12,
@@ -483,7 +483,7 @@ const HOTELS_DATA = [
         "comment": "",
         "mapsLink": "https://maps.app.goo.gl/YGVuPvFhnhFa6xGj7",
         "lat": 41.38977206036208,
-        "long": 2.142002519971402
+        "lng": 2.142002519971402
     },
     {
         "route": 12,
@@ -492,7 +492,7 @@ const HOTELS_DATA = [
         "comment": "",
         "mapsLink": "https://maps.app.goo.gl/Tu3z55iYzberG3VM9",
         "lat": 41.39089196992799,
-        "long": 2.141733099018712
+        "lng": 2.141733099018712
     },
     {
         "route": 12,
@@ -501,7 +501,7 @@ const HOTELS_DATA = [
         "comment": "",
         "mapsLink": "https://maps.app.goo.gl/DohJwGqy1YJYBUVZA",
         "lat": 41.38884371266142,
-        "long": 2.136296800793948
+        "lng": 2.136296800793948
     },
     {
         "route": 13,
@@ -510,7 +510,7 @@ const HOTELS_DATA = [
         "comment": "Bajando a la izqda.",
         "mapsLink": "https://maps.app.goo.gl/53n9UVwWpTH7pLMa6",
         "lat": 41.384563518310465,
-        "long": 2.137785698871324
+        "lng": 2.137785698871324
     },
     {
         "route": 13,
@@ -519,7 +519,7 @@ const HOTELS_DATA = [
         "comment": "Bajando a la izqda.",
         "mapsLink": "https://maps.app.goo.gl/sdH4ibdtKVtuqKcaA",
         "lat": 41.3825465063362,
-        "long": 2.139978113501307
+        "lng": 2.139978113501307
     },
     {
         "route": 13,
@@ -528,7 +528,7 @@ const HOTELS_DATA = [
         "comment": "Antiguo hotel Expo",
         "mapsLink": "https://maps.app.goo.gl/eabw4uwmo34AdYGK8",
         "lat": 41.379110894210626,
-        "long": 2.142916839993952
+        "lng": 2.142916839993952
     },
     {
         "route": 13,
@@ -537,7 +537,7 @@ const HOTELS_DATA = [
         "comment": "Estació de Sants",
         "mapsLink": "https://maps.app.goo.gl/ir26wyiXVhmdsbXg7",
         "lat": 41.379881670482916,
-        "long": 2.1413035203990174
+        "lng": 2.1413035203990174
     },
     {
         "route": 13,
@@ -546,7 +546,7 @@ const HOTELS_DATA = [
         "comment": "Antiguo Torre Catalunya",
         "mapsLink": "https://maps.app.goo.gl/f1oAEzjw7vCgzHRc7",
         "lat": 41.379953881013684,
-        "long": 2.1426241759747726
+        "lng": 2.1426241759747726
     },
     {
         "route": 13,
@@ -555,7 +555,7 @@ const HOTELS_DATA = [
         "comment": "",
         "mapsLink": "https://maps.app.goo.gl/YTiQGcDDYDCZCsia6",
         "lat": 41.38123711601401,
-        "long": 2.145398544537613
+        "lng": 2.145398544537613
     },
     {
         "route": 14,
@@ -564,7 +564,7 @@ const HOTELS_DATA = [
         "comment": "Esq. c/Mèxic",
         "mapsLink": "https://maps.app.goo.gl/3QVwuyoPvaqFxTtp8",
         "lat": 41.373388684991745,
-        "long": 2.147403862876384
+        "lng": 2.147403862876384
     },
     {
         "route": 14,
@@ -573,7 +573,7 @@ const HOTELS_DATA = [
         "comment": "Esq. c/Lleida",
         "mapsLink": "https://maps.app.goo.gl/DqR3mNgQJnKkfP6J9",
         "lat": 41.37293155764033,
-        "long": 2.154955500990119
+        "lng": 2.154955500990119
     },
     {
         "route": 14,
@@ -582,7 +582,7 @@ const HOTELS_DATA = [
         "comment": "",
         "mapsLink": "https://maps.app.goo.gl/eLTeLFMcRqjHHfPG7",
         "lat": 41.37552539081576,
-        "long": 2.1487620518454627
+        "lng": 2.1487620518454627
     },
     {
         "route": 14,
@@ -591,7 +591,7 @@ const HOTELS_DATA = [
         "comment": "A la dcha c/Tarragona. Lado montaña",
         "mapsLink": "https://maps.app.goo.gl/KM1ZqjT78W5oJD668",
         "lat": 41.37675426821944,
-        "long": 2.146087027761536
+        "lng": 2.146087027761536
     },
     {
         "route": 14,
@@ -600,7 +600,7 @@ const HOTELS_DATA = [
         "comment": "",
         "mapsLink": "https://maps.app.goo.gl/X3ButXBFKt1NFhN8A",
         "lat": 41.37478152219583,
-        "long": 2.170597195715193
+        "lng": 2.170597195715193
     },
     {
         "route": 14,
@@ -609,7 +609,7 @@ const HOTELS_DATA = [
         "comment": "",
         "mapsLink": "https://maps.app.goo.gl/whfQgvWHW4ze3hMbA",
         "lat": 41.375123020028816,
-        "long": 2.168312842014166
+        "lng": 2.168312842014166
     },
     {
         "route": 15,
@@ -618,7 +618,7 @@ const HOTELS_DATA = [
         "comment": "Detrás Rey J.Carlos / Camp Nou",
         "mapsLink": "https://maps.app.goo.gl/W3nyK8DuMrMxnfMZ6",
         "lat": 41.37703194911845,
-        "long": 2.114091251048651
+        "lng": 2.114091251048651
     },
     {
         "route": 15,
@@ -627,7 +627,7 @@ const HOTELS_DATA = [
         "comment": "",
         "mapsLink": "https://maps.app.goo.gl/3Ujom7vTmdNV5H6HA",
         "lat": 41.381644459181906,
-        "long": 2.1089750262115254
+        "lng": 2.1089750262115254
     },
     {
         "route": 16,
@@ -636,7 +636,7 @@ const HOTELS_DATA = [
         "comment": "antiguo Sofía",
         "mapsLink": "https://maps.app.goo.gl/Rxres1ehEZXsNcaa9",
         "lat": 41.38666666833817,
-        "long": 2.123015710414754
+        "lng": 2.123015710414754
     },
     {
         "route": 16,
@@ -645,7 +645,7 @@ const HOTELS_DATA = [
         "comment": "",
         "mapsLink": "https://maps.app.goo.gl/QXfUfPJHQrZcMvbm6",
         "lat": 41.38901885914988,
-        "long": 2.131362567297132
+        "lng": 2.131362567297132
     },
     {
         "route": 17,
@@ -654,7 +654,7 @@ const HOTELS_DATA = [
         "comment": "",
         "mapsLink": "https://maps.app.goo.gl/KB3TKWeVS9xfVqEC7",
         "lat": 41.3561037838946,
-        "long": 2.1236673976388847
+        "lng": 2.1236673976388847
     },
     {
         "route": 17,
@@ -663,7 +663,7 @@ const HOTELS_DATA = [
         "comment": "",
         "mapsLink": "https://maps.app.goo.gl/Uqm8nPpd5tsMAQK4A",
         "lat": 41.352694655528616,
-        "long": 2.1266837992537995
+        "lng": 2.1266837992537995
     },
     {
         "route": 17,
@@ -681,7 +681,7 @@ const HOTELS_DATA = [
         "comment": "",
         "mapsLink": "https://maps.app.goo.gl/jKmE3KCdxKFwxyYH8",
         "lat": 41.35571703025612,
-        "long": 2.1272230564478796
+        "lng": 2.1272230564478796
     },
     {
         "route": 17,
@@ -690,7 +690,7 @@ const HOTELS_DATA = [
         "comment": "Esq. c/ Alumini",
         "mapsLink": "https://maps.app.goo.gl/hi6VvYhFoNGiteTq7",
         "lat": 41.35928520050959,
-        "long": 2.132392914319662
+        "lng": 2.132392914319662
     }
 ];
 
