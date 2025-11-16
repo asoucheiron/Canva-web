@@ -206,10 +206,10 @@ document.getElementById('calculate-route-btn').addEventListener('click', async (
         // Construir waypoints con el orden calculado (todos menos el último)
         const waypoints = optimalRoute.slice(0, -1).map(h => `${h.lat},${h.lng}`).join('|');
         const destination = `${optimalRoute[optimalRoute.length - 1].lat},${optimalRoute[optimalRoute.length - 1].lng}`;
-        const origin = "My+Location";
+        const origin = `${AIRPORT_LAT},${AIRPORT_LNG}`;
 
         // URL de Google Maps con el orden calculado (sin optimize=true, ya que lo calculamos nosotros)
-        let mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=${destination}&waypoints=${waypoints}&travelmode=driving`;
+        let mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&waypoints=${waypoints}&travelmode=driving`;
 
         window.open(mapsUrl, '_blank', 'noopener noreferrer');
         showToast(`Ruta calculada (${distance.toFixed(2)} km aproximados) con Google Maps 🚗`, 'success');
