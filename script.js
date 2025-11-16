@@ -195,25 +195,30 @@ document.getElementById('calculate-route-btn').addEventListener('click', async (
     }
 
     try {
-        const locations = selectedHotels.map(h => `${h.lat},${h.lng}`);
+        // Coordenadas del aeropuerto (agrega estas constantes si no las tienes)
+        const AIRPORT_LAT = 41.2974; // Latitud del aeropuerto
+        const AIRPORT_LNG = 2.0785; // Longitud del aeropuerto
 
-        const origin = encodeURIComponent(AIRPORT_ADDRESS);
-        const destination = encodeURIComponent(locations[locations.length - 1]);
+        // Calcular la ruta usando Nearest Neighbor
+        const { route: optimalRoute, distance } = calculateNearestNeighborRoute(AIRPORT_LAT, AIRPORT_LNG, selectedHotels);
 
-        /* Los waypoints son todos los hoteles seleccionados */
-        const waypoints = locations.slice(0, -1).map(encodeURIComponent).join('|');
+        // Construir waypoints con el orden calculado (todos menos el último)
+        const waypoints = optimalRoute.slice(0, -1).map(h => `${h.lat},${h.lng}`).join('|');
+        const destination = `${optimalRoute[optimalRoute.length - 1].lat},${optimalRoute[optimalRoute.length - 1].lng}`;
+        const origin = `${AIRPORT_LAT},${AIRPORT_LNG}`;
 
-        /* URL de Google Maps para direcciones. Utilizamos /dir/ con &optimize=true */
-        let mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&waypoints=${waypoints}&travelmode=driving&optimize=true`;
+        // URL de Google Maps con el orden calculado (sin optimize=true, ya que lo calculamos nosotros)
+        let mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&waypoints=${waypoints}&travelmode=driving`;
 
         window.open(mapsUrl, '_blank', 'noopener noreferrer');
-        showToast('Ruta optimizada calculada con Google Maps 🚗', 'success');
+        showToast(`Ruta calculada (${distance.toFixed(2)} km aproximados) con Google Maps 🚗`, 'success');
 
     } catch (err) {
-        console.error("Error al generar la URL de Google Maps:", err);
-        showToast('Error al generar la ruta en Google Maps', 'error');
+        console.error("Error al calcular la ruta:", err);
+        showToast('Error al calcular la ruta', 'error');
     }
 });
+
 
 document.getElementById('clear-selection-btn').addEventListener('click', () => {
     hotels.forEach(hotel => hotel.selected = false);
@@ -343,5 +348,53 @@ async function initializeApp() {
 
     initializeHotels();
 }
+
+// Función para calcular distancia entre dos puntos (fórmula de Haversine en km)
+function calculateDistance(lat1, lng1, lat2, lng2) {
+    const R = 6371; // Radio de la Tierra en km
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLng = (lng2 - lng1) * Math.PI / 180;
+    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+        Math.sin(dLng / 2) * Math.sin(dLng / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    return R * c;
+}
+
+// Función para calcular la ruta usando Nearest Neighbor
+function calculateNearestNeighborRoute(airportLat, airportLng, selectedHotels) {
+    const hotelCoords = selectedHotels.map(h => ({ lat: h.lat, lng: h.lng, name: h.name }));
+    const route = [];
+    let currentLat = airportLat;
+    let currentLng = airportLng;
+    let remainingHotels = [...hotelCoords];
+    let totalDistance = 0;
+
+    while (remainingHotels.length > 0) {
+        let nearestIndex = -1;
+        let minDistance = Infinity;
+
+        // Encontrar el hotel más cercano al punto actual
+        for (let i = 0; i < remainingHotels.length; i++) {
+            const dist = calculateDistance(currentLat, currentLng, remainingHotels[i].lat, remainingHotels[i].lng);
+            if (dist < minDistance) {
+                minDistance = dist;
+                nearestIndex = i;
+            }
+        }
+
+        // Agregar el hotel más cercano a la ruta
+        const nearestHotel = remainingHotels.splice(nearestIndex, 1)[0];
+        route.push(nearestHotel);
+        totalDistance += minDistance;
+
+        // Actualizar el punto actual
+        currentLat = nearestHotel.lat;
+        currentLng = nearestHotel.lng;
+    }
+
+    return { route, distance: totalDistance };
+}
+
 
 initializeApp();
