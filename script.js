@@ -30,6 +30,7 @@ function initializeHotels() {
     renderHotelsList();
     updateCounts();
 }
+//comment commit
 
 function renderHotelsList() {
     const listContainer = document.getElementById('hotels-list');
