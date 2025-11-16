@@ -205,7 +205,7 @@ document.getElementById('calculate-route-btn').addEventListener('click', async (
         // Construir waypoints con el orden calculado (todos menos el último)
         const waypoints = optimalRoute.slice(0, -1).map(h => `${h.lat},${h.lng}`).join('|');
         const destination = `${optimalRoute[optimalRoute.length - 1].lat},${optimalRoute[optimalRoute.length - 1].lng}`;
-        const origin = "My+location";
+        const origin = "My+Location";
 
         // URL de Google Maps con el orden calculado (sin optimize=true, ya que lo calculamos nosotros)
         let mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=${destination}&waypoints=${waypoints}&travelmode=driving`;
