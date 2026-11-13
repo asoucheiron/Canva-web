@@ -19,6 +19,13 @@ function getRouteColor(routeNumber) {
     return ROUTE_COLORS[routeNumber] || '#667eea';
 }
 
+// Texto oscuro sobre colores claros (blanco, amarillo, cian...) y blanco sobre los oscuros
+function getRouteTextColor(hex) {
+    const n = parseInt(hex.slice(1), 16);
+    const r = (n >> 16) & 255, g = (n >> 8) & 255, b = n & 255;
+    return (0.299 * r + 0.587 * g + 0.114 * b) > 160 ? '#1a202c' : '#ffffff';
+}
+
 function initializeHotels() {
     hotels = HOTELS_DATA.map((hotel, index) => ({
         ...hotel,
@@ -49,7 +56,7 @@ function renderHotelsList() {
     <div class="hotel-card ${hotel.selected ? 'selected' : ''}" data-id="${hotel.id}">
       <div class="hotel-header">
         <div class="hotel-info">
-          <span class="hotel-route" style="background-color: ${hotel.color};">Ruta ${hotel.route}</span>
+          <span class="hotel-route" style="background-color: ${hotel.color}; color: ${getRouteTextColor(hotel.color)};">Ruta ${hotel.route}</span>
           <h3 class="hotel-name">${hotel.name}</h3>
           <p class="hotel-address">📍 ${hotel.address}</p>
           ${hotel.comment ? `<p class="hotel-comment">${hotel.comment}</p>` : ''}
