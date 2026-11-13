@@ -1,9 +1,19 @@
+/* Colores y tipografía configurables. js/theme.js los cambia desde el panel de Canva. */
+:root {
+    --bg-start: #667eea;
+    --surface: #ffffff;
+    --text: #2d3748;
+    --primary: #667eea;
+    --success: #48bb78;
+    --font: 'Inter';
+}
+
 body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: var(--font), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, var(--bg-start) 0%, #764ba2 100%);
     min-height: 100%;
     height: 100%;
 }
@@ -21,7 +31,7 @@ html {
 }
 
 .header {
-    background: white;
+    background: var(--surface);
     padding: 16px;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -30,15 +40,15 @@ html {
 
 .header h1 {
     margin: 0 0 8px 0;
-    color: #1a202c;
-    font-size: 24px;
+    color: var(--text);
+    font-size: var(--title-size, 24px);
     font-weight: 700;
 }
 
 .header p {
     margin: 0;
     color: #718096;
-    font-size: 14px;
+    font-size: var(--instruction-size, 14px);
 }
 
 .main-content {
@@ -48,7 +58,7 @@ html {
 }
 
 .hotels-section {
-    background: white;
+    background: var(--surface);
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 16px;
@@ -70,12 +80,12 @@ html {
 .section-title {
     font-size: 20px;
     font-weight: 600;
-    color: #2d3748;
+    color: var(--text);
     margin: 0;
 }
 
 .hotel-count {
-    background: #667eea;
+    background: var(--primary);
     color: white;
     padding: 4px 12px;
     border-radius: 20px;
@@ -91,7 +101,7 @@ html {
 }
 
 .hotel-card {
-    background: white;
+    background: var(--surface);
     border: 2px solid #e2e8f0;
     border-radius: 8px;
     padding: 14px;
@@ -102,12 +112,12 @@ html {
 }
 
 .hotel-card:hover {
-    border-color: #667eea;
+    border-color: var(--primary);
     box-shadow: 0 2px 4px rgba(102, 126, 234, 0.1);
 }
 
 .hotel-card.selected {
-    border-color: #667eea;
+    border-color: var(--primary);
     background: #f7faff;
 }
 
@@ -124,8 +134,8 @@ html {
 
 .hotel-route {
     display: inline-block;
-    background: #667eea;
-    color: white;
+    background: var(--route-color, var(--primary));
+    color: var(--route-text, white);
     border: 1px solid rgba(0, 0, 0, 0.15);
     padding: 4px 10px;
     border-radius: 6px;
@@ -137,7 +147,7 @@ html {
 .hotel-name {
     font-size: 16px;
     font-weight: 600;
-    color: #2d3748;
+    color: var(--text);
     margin: 0 0 4px 0;
 }
 
@@ -154,6 +164,10 @@ html {
     margin: 0;
 }
 
+.hotel-comment:empty {
+    display: none;
+}
+
 .checkbox-container {
     display: flex;
     align-items: center;
@@ -163,13 +177,13 @@ html {
     width: 28px;
     height: 28px;
     cursor: pointer;
-    accent-color: #667eea;
+    accent-color: var(--primary);
     min-width: 28px;
     min-height: 28px;
 }
 
 .sidebar {
-    background: white;
+    background: var(--surface);
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 16px;
@@ -194,13 +208,28 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-left: 4px solid #667eea;
+    border-left: 4px solid var(--route-color, var(--primary));
+}
+
+.selected-hotel-meta {
+    font-size: 12px;
+    color: #718096;
+    margin-top: 4px;
+}
+
+.route-dot {
+    flex-shrink: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--route-color, var(--primary));
+    border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .selected-hotel-name {
     font-size: 14px;
     font-weight: 600;
-    color: #2d3748;
+    color: var(--text);
 }
 
 .route-actions {
@@ -225,7 +254,7 @@ html {
 }
 
 .btn-success {
-    background: #48bb78;
+    background: var(--success);
     color: white;
 }
 
@@ -239,7 +268,7 @@ html {
 }
 
 .btn-primary {
-    background: #667eea;
+    background: var(--primary);
     color: white;
 }
 
@@ -316,7 +345,7 @@ html {
 
 .search-input:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: var(--primary);
 }
 
 @media (min-width: 1024px) {
@@ -339,11 +368,11 @@ html {
     }
 
     .header h1 {
-        font-size: 32px;
+        font-size: var(--title-size, 32px);
     }
 
     .header p {
-        font-size: 16px;
+        font-size: var(--instruction-size, 16px);
     }
 }
 

@@ -16,7 +16,7 @@ document.getElementById('calculate-route-btn').addEventListener('click', async (
 
       /*Funció per optimitzar els diferents punts d'interès de la ruta */
       async function optimizeTomTom(points) {
-        const apiKey = 'YmdLd0EcLBw5lDu0mfNTms8qld0dqEyH';
+        const apiKey = 'TU_API_KEY_DE_TOMTOM'; // no subir nunca la clave real al repositorio
         /*CORRECCIÓN: El formato correcto es lat1,lon1:lat2,lon2:...*/
         const locations = points.map(p => `${p.lat},${p.lng}`).join(':');
         /*La URL de TomTom para Waypoint Optimization*/

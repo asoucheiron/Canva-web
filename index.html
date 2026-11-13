@@ -34,12 +34,7 @@
           <h2 class="section-title">🗺️ Ruta Seleccionada</h2>
           <span class="hotel-count" id="selected-count">0 seleccionados</span>
         </div>
-        <div class="selected-hotels" id="selected-hotels">
-          <div class="empty-state">
-            <div class="empty-icon">📌</div>
-            <p>Selecciona hoteles de la lista para comenzar a planificar tu ruta.</p>
-          </div>
-        </div>
+        <div class="selected-hotels" id="selected-hotels"></div>
         <div class="route-actions">
           <button class="btn btn-success" id="calculate-route-btn" disabled>
             <span>🧭 Calcular Ruta Óptima</span>
@@ -52,8 +47,52 @@
     </div>
   </div>
 
-  <script src="hotels.js"></script>
-  <script src="script.js"></script>
+  <!-- Plantillas que js/ui.js clona y rellena (los campos se marcan con data-field) -->
+  <template id="hotel-card-template">
+    <div class="hotel-card">
+      <div class="hotel-header">
+        <div class="hotel-info">
+          <span class="hotel-route" data-field="route"></span>
+          <h3 class="hotel-name" data-field="name"></h3>
+          <p class="hotel-address">📍 <span data-field="address"></span></p>
+          <p class="hotel-comment" data-field="comment"></p>
+        </div>
+        <div class="checkbox-container">
+          <input type="checkbox" class="checkbox" aria-label="Seleccionar hotel">
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template id="selected-item-template">
+    <div class="selected-hotel-item">
+      <div>
+        <div class="selected-hotel-name" data-field="name"></div>
+        <div class="selected-hotel-meta" data-field="meta"></div>
+      </div>
+      <span class="route-dot"></span>
+    </div>
+  </template>
+
+  <template id="empty-state-template">
+    <div class="empty-state">
+      <div class="empty-icon" data-field="icon"></div>
+      <p data-field="message"></p>
+    </div>
+  </template>
+
+  <template id="toast-template">
+    <div class="toast">
+      <span data-field="icon"></span>
+      <span data-field="message"></span>
+    </div>
+  </template>
+
+  <script src="js/hotels.js"></script>
+  <script src="js/route.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>
