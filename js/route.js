@@ -6,6 +6,11 @@ const AIRPORT = {
     lng: 2.0785
 };
 
+// TODO (antes de desplegar): volver a poner MAPS_ORIGIN = 'My Location' para que Google Maps
+// salga de la ubicación actual del conductor. Ahora está fijo en la T1 del aeropuerto para hacer pruebas.
+const AIRPORT_T1 = { lat: 41.2887, lng: 2.0734 };
+const MAPS_ORIGIN = `${AIRPORT_T1.lat},${AIRPORT_T1.lng}`;
+
 // Distancia en línea recta entre dos puntos {lat, lng}, en km (fórmula de Haversine)
 function distanceKm(a, b) {
     const R = 6371;
@@ -45,12 +50,12 @@ function nearestNeighborRoute(start, points) {
 }
 
 // URL de Google Maps con las paradas en el orden dado.
-// El origen es la ubicación actual del conductor; la última parada es el destino.
+// El origen es MAPS_ORIGIN (ver el TODO de arriba); la última parada es el destino.
 function buildGoogleMapsUrl(route) {
     const toCoords = p => `${p.lat},${p.lng}`;
     const params = new URLSearchParams({
         api: '1',
-        origin: 'My Location',
+        origin: MAPS_ORIGIN,
         destination: toCoords(route[route.length - 1]),
         travelmode: 'driving'
     });
